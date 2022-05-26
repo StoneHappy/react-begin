@@ -3,10 +3,14 @@ import { createRoot } from 'react-dom/client';
 
 import "./styles/main.css"
 
+import airbnblogo from "./images/airbnb-logo.png"
+
 function App() {
       return (
-          <div>App1</div>
-      )  
+          <div>
+              <img src={airbnblogo}></img>
+          </div>
+      );  
 }
 
 
