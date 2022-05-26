@@ -1,15 +1,16 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
+import Navbar from "./components/Navbar";
+
 
 import "./styles/main.css"
 
-import airbnblogo from "./images/airbnb-logo.png"
 
 function App() {
       return (
-          <div>
-              <img src={airbnblogo}></img>
-          </div>
+          <app>
+              <Navbar></Navbar>
+          </app>
       );  
 }
 
