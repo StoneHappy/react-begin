@@ -126,3 +126,23 @@ fetch("https://api.imgflip.com/get_memms")
     .then(res => res.json())
     .then(data => consol.log(data));
 ```
+
+## Effect must clean up Event
+```js
+React.useEffect(
+    () => {
+        function watchWidth()
+        {
+            console.log("Setting up!");
+            console.log(windows.innerWidth);
+        }
+
+        window.addEventListener("resize", watchWidth);
+
+        return function() {
+            console.log("Cleaning up");
+            window.removeEventListener("resize", watchWidth);
+        }
+    }
+)
+```
