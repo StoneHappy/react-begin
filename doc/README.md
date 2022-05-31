@@ -119,3 +119,10 @@ export default function Navbar()
     )
 }
 ```
+
+##  fetch
+```js
+fetch("https://api.imgflip.com/get_memms")
+    .then(res => res.json())
+    .then(data => consol.log(data));
+```
