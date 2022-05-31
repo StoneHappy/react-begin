@@ -149,3 +149,8 @@ React.useEffect(
 
 ## 更改样式
 更改样式只需要更改`className`即可
+
+## useState 函数
+`useState`中可以传入函数，也可以在里面执行函数
+
+返回的函数只会在页面刷新的时候执行，执行的函数，是每次state更新的时候执行。
