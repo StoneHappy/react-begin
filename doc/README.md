@@ -83,3 +83,39 @@ export default function Form(props)
     )
 }
 ```
+
+## useEffect
+``Effect``是在``return``之后才执行。
+
+并根据第二个参数参数是否改变，而决定是否执行回调函数。
+
+```js
+import React from "react";
+
+export default function Navbar()
+{
+    const [message, setmessage] = React.useState("asdasd");
+    const [count, setCount] = React.useState(0);
+    console.log("Render ran!");
+
+    function handleClick()
+    {
+        setCount(count => {
+            const newcount = count + 1;
+            console.log(newcount);
+            return newcount;
+        })
+    }
+
+    React.useEffect(function(){
+        console.log("effect ran!");
+    }, [0]);
+
+    return (
+        <nav>
+            <h1> {count} </h1>
+            <button onClick={handleClick}> add </button>
+        </nav>
+    )
+}
+```
