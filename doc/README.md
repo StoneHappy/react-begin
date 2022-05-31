@@ -53,4 +53,33 @@ export default function test(props)
          <div/>
     )
 }
+``` 
+
+## form
+```js
+import React from 'react'
+
+export default function Form(props)
+{
+    const [formData, seFormData] = React.useState({
+        firstName: "",
+        lastName: ""
+    });
+
+    function handleChange(event)
+    {
+        setFormData(formData => {
+            {
+                ...formData,
+                [event.target.name]: event.target.value,
+            }
+        })
+    }
+    return (
+        <form>
+            <input onChange={handleChange} name="firstName"><input/>
+            <input onChange={handleChange} name="lastName"><input/>
+        <form/>
+    )
+}
 ```
